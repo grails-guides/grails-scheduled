@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat
 @CompileStatic //<2>
 class HelloWorldJobService {
 
-    boolean lazyInit = false //<3>
+    static lazyInit = false //<3>
 
     @Scheduled(fixedDelay = 10000L) //<4>
     void executeEveryTen() {

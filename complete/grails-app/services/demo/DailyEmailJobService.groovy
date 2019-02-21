@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.Scheduled
 @CompileStatic
 class DailyEmailJobService  {
 
-    boolean lazyInit = false // <1>
+    static lazyInit = false // <1>
 
     EmailService emailService // <2>
 

@@ -5,6 +5,7 @@ import demo.EmailService
 import demo.EmailTask
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
+import org.apache.commons.lang.time.DateUtils
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
 import java.time.Duration
 
@@ -30,7 +31,7 @@ class DailyMailJobService {
     Date dailyDate() { //<3>
         Date startAt = new Date(hours: HOUR, minutes: MINUTE, seconds: SECONDS)
         if(startAt.before(new Date())) {
-            return (startAt + 1)
+            return (DateUtils.addDays(startAt, 1))
         }
         startAt
     }
