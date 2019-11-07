@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat
 class EmailService {
 
     void send(String user, String message) {
-        log.info "Sending email to ${user} : ${message}"+ ' at ' + new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date())
+        log.info "Sending email to {} : {} at {}",
+                user, message, new SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(new Date())
     }
 }
