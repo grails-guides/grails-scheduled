@@ -1,5 +1,8 @@
 package demo
 
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class EmailTask implements Runnable { //<1>
 
     String email //<2>
