@@ -22,4 +22,5 @@ Grails dependency injection
 ----
 include::{sourceDir}/grails-app/init/demo/Application.groovy[]
 ----
-<1> Enable discovery of additional configuration files. You may also use Spring `@EnableScheduling` here to trigger scheduling.
+<1> Enable discovery of additional configuration files.
+<2> Use Spring `@EnableScheduling` here to trigger scheduling.
